@@ -1,0 +1,21 @@
+---
+layout: default
+type: search
+---
+
+<div class="home">
+  
+  <h1 class="page-heading">Search results for '<span id="query"></span>'</h1>
+
+  <ul class="post-list" id="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: '%b %-d, %Y' }}</span>
+
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <p>{{ post.summary }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
