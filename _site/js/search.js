@@ -22,7 +22,7 @@ function search() {
   location.hash = query;
   list.innerHTML = '<span class="text">Loading results...</span>';
 
-  xhr.open('GET', encodeURI('http://elastic.api.botleg.com/search/' + query));
+  xhr.open('GET', encodeURI('https://github.com/inbasaakaran/testrepo/search/' + query));
   xhr.onload = function() {
     if (xhr.status === 200) {
       render(JSON.parse(xhr.responseText));
